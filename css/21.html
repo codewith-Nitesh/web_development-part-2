@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+          }
+          .container{
+            display: grid;
+            grid-template-columns: repeat(3,300px);
+            grid-template-rows: repeat(1,300px);
+            gap: 2rem;
+          }
+          .card{
+            height: 100%;
+            width: 100%;
+          }
+          .card img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="card">
+                <img src="../image1.jpg" alt="">
+            </div>
+            <div class="card">
+                <img src="../image2.jpeg" alt="">
+            </div>
+            <div class="card">
+                <img src="../image3.jpeg" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

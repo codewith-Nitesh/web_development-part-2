@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .background_color{
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+        .back_color{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            z-index: -1;
+        }
+        .green_color{
+            background-color: green;
+        }
+        .blue_color{
+            background-color: blue;
+        } 
+
+        [type="radio"]:checked
+        [type="radio"]:not(:checked){
+            position: absolute;
+            visibility: hidden;
+        }
+        
+        [type="radio"]:checked,
+            [type="radio"]:not(:checked){
+              position: absolute;
+               /* left: -9999px;    */
+              /* visibility:hidden; */
+            }
+
+
+        #color_1:checked~.background_color .green_color{
+            opacity: 1;
+        }
+        #color_2:checked~.background_color .blue_color{
+            opacity: 1;
+        }
+
+    </style>
+</head>
+<body>
+    <input type="radio" title="radio" name="selected" checked id="color_1">
+    <label for="color1">green</label>
+    <input type="radio" title="radio" name="selected"  id="color_2">
+    <label for="color2">blue</label>
+    <div class="background_color">
+      <div class="back_color green_color">
+
+      </div>
+      <div class="back_color blue_color">
+        
+      </div>
+    </div>
+</body>
+</html>

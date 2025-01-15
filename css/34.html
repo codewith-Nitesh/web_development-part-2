@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+            @import url("https://fonts.googleleapis.com/css2?family=poppins:wght@300;400;500;600&display=swap");
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'poppins', sans-serif;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+        }
+        .wrapper{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container{
+            width: 600px;
+            height: 60px;
+            position: relative;
+            border-radius: 5px;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 5px 5px rgba(0,0,0,0.25);
+        }
+        .container label{
+            width: 100%;
+            height: 100%;
+            line-height: 60px;
+            font-weight: bold;
+            font-size: 18px;
+            border-radius: 5px;
+            margin: 0 5px;
+            text-align: center;
+            position: relative;
+            color: #8e44ad;
+            z-index: 1;
+            cursor: pointer;
+        }
+       .container label:hover{
+            background-color: aquamarine;
+       }
+        .container label i{
+            color: black;
+            /* background-color: black; */
+        }
+        .container .slider{
+            position: absolute;
+            height: 100%;
+            width: 20%;
+            top: 0;
+            left: 0;
+            background-color: blue;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="slider"></div>
+            <label for="" class="indi"><i class="fas fa-home"></i>
+            Home</label>
+            <label for=""  class="indi"><i class="fas fa-blog"></i>
+                Blog</label>
+                <label for=""  class="indi"><i class="fas fa-code"></i>
+                    Code</label>
+                    <label for=""  class="indi"><i class="fas fa-stream"></i>
+                        Help</label>
+                        <label for=""  class="indi"><i class="fas fa-question-circle"></i>
+                            About</label>
+        </div>
+    </div>
+</body>
+</html>

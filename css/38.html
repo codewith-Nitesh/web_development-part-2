@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css verticle Tabs | coding labs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+body{
+    Min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #dad3f8;
+}
+.container{
+    max-width: 950px;
+    width: 100%;
+    background: #fff;
+    border-radius: 12px;
+    margin: 0 20px;
+    padding: 40px 50px 40px 40px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+.container .main_title{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.container .content .list{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 20%;
+    margin-right: 50px;
+}
+.content .list label{
+    height: 60px;
+    border-radius: 12px;
+    line-height: 60px;
+    font-size: 22px;
+    font-weight: 500;
+    cursor: pointer;
+    /* margin: 5px 0; */
+    padding-left: 25px;
+    color: #333;
+    z-index: 1;
+    transition: all 0.1s ease;
+}
+.content .list label:hover{
+    color:#6d50e2;
+}
+#home:checked ~ .list .home,
+#blog:checked ~ .list .blog,
+#help:checked ~ .list .help,
+#code:checked ~ .list .code,
+#about:checked ~ .list .about{
+    color: #fff;
+}
+
+.content .indicator{
+    position: absolute;
+    height: 60px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #6d50e2;
+    border-radius: 12px;
+    transition: all 0.1s ease;
+}
+
+#home:checked ~ .list .indicator{
+    top:0;
+}
+#blog:checked ~ .list .indicator{
+    top: 60px;
+}
+#help:checked ~ .list .indicator{
+    top: 120px;
+}
+#code:checked ~ .list .indicator{
+    top: 180px;
+}
+#about:checked ~ .list .indicator{
+    top: 240px;
+}
+.container input[type="radio"]{
+    display: none;
+}
+.container .content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container .content .text_content{
+    width: 80%;
+    height: 100%;
+}
+.content .text_content .title{
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.content .text_content p{
+   text-align: justify;
+}
+.content .text_content .text{
+    display: none;
+}
+
+.content .text_content .title{
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+
+
+#home:checked ~ .text_content .home,
+#blog:checked ~ .text_content .blog,
+#help:checked ~ .text_content .help,
+#code:checked ~ .text_content .code,
+#about:checked ~ .text_content .about{
+    display: block;
+}
+.topic{
+    margin-left: 6px;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main_title">CSS Verticle Labs</div>
+        <div class="content">
+            <input type="radio" name="indicator" checked id="home">
+            <input type="radio" name="indicator" id="blog">
+            <input type="radio" name="indicator" id="help">
+            <input type="radio" name="indicator" id="code">
+            <input type="radio" name="indicator" id="about">
+            <div class="list">
+                <label for="home" class="home"><i class="fas fa-home"></i><span class="topic">Home</span></label>
+                <label for="blog" class="blog"><i class="fas fa-blog"></i><span class="topic">Blog</span></label>
+                <label for="help" class="help"><i class="fas fa-envelope"></i><span class="topic">Help</span></label>
+                <label for="code" class="code"><i class="fas fa-code"></i><span class="topic">Code</span></label>
+                <label for="about" class="about"><i class="fas fa-home"></i><span class="topic">About</span></label>
+                <div class="indicator"></div>
+            </div>
+            <div class="text_content">
+                <div class="home text">
+                    <div class="title">Home Content</div>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum soluta accusantium consectetur delectus aut nisi optio maiores alias, magni totam, exercitationem velit! Dignissimos totam doloremque accusamus culpa ex, neque vero cumque ducimus! Illum quam architecto quasi molestiae consequuntur, magni quis! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur fugiat quaerat quo ducimus laborum esse doloribus hic similique unde, obcaecati vitae magni labore ipsum repellendus incidunt perferendis veniam expedita rem! Nostrum, explicabo magnam. Animi explicabo eos laboriosam distinctio consequatur pariatur! Totam mollitia adipisci aspernatur quae officia minima reiciendis, iste sit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia vitae excepturi omnis debitis! Autem inventore dicta eum dignissimos nisi sed distinctio laboriosam at dolore, eos aut sint! Possimus, quas exercitationem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, minima!</p>
+                </div>
+                <div class="blog text">
+                    <div class="title">Blog Content</div>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum soluta accusantium consectetur delectus aut nisi optio maiores alias, magni totam, exercitationem velit! Dignissimos totam doloremque accusamus culpa ex, neque vero cumque ducimus! Illum quam architecto quasi molestiae consequuntur, magni quis! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur fugiat quaerat quo ducimus laborum esse doloribus hic similique unde, obcaecati vitae magni labore ipsum repellendus incidunt perferendis veniam expedita rem! Nostrum, explicabo magnam. Animi explicabo eos laboriosam distinctio consequatur pariatur! Totam mollitia adipisci aspernatur quae officia minima reiciendis, iste sit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia vitae excepturi omnis debitis! Autem inventore dicta eum.</p>
+                </div>
+                <div class="help text">
+                    <div class="title">help Content</div>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum soluta accusantium consectetur delectus aut nisi optio maiores alias, magni totam, exercitationem velit! Dignissimos totam doloremque accusamus culpa ex, neque vero cumque ducimus! Illum quam architecto quasi molestiae consequuntur, magni quis! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur fugiat quaerat quo ducimus laborum esse doloribus hic similique unde, obcaecati vitae magni labore ipsum repellendus incidunt perferendis veniam expedita rem! Nostrum, explicabo magnam. Animi explicabo eos laboriosam distinctio consequatur pariatur! Totam mollitia adipisci aspernatur quae officia minima reiciendis, iste sit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia vitae excepturi omnis debitis! Autem inventore dicta eum dignissimos nisi sed distinctio laboriosam at dolore, eos aut sint! Possimus, quas exercitationem. </p>
+                </div>
+                <div class="code text">
+                    <div class="title">Code Content</div>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum soluta accusantium . Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, minima!</p>
+                </div>
+                <div class="about text">
+                    <div class="title">About Content</div>
+                    <p>Lorem ipsum. io maiores alias, magni totam, exercitationem velit! Dignissimos totam doloremque accusamus culpa ex, neque vero cumque ducimus! Illum quam architecto quasi molestiae consequuntur, magni quis! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur fugiat quaerat quo ducimus laborum esse doloribus hic similique unde, obcaecati vitae magni labore ipsum repellendus incidunt perferendis veniam expedita rem! Nostrum, explicabo magnam. Animi explicabo eos laboriosam distinctio consequatur pariatur! Totam mollitia adipisci aspernatur quae officia minima reiciendis, iste sit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia vitae excepturi omnis debitis! Autem inventore dicta eum dignissimos nisi sed distinctio laboriosam at dolore, eos aut sint! Possimus, quas exercitationem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, minima!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

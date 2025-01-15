@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation ka Gyan</title>
+    <!-- @keyframes
+    animation-name
+    animation-duration
+    animation-delay
+    animation-iteration-count
+    animation-direction
+    animation-timing-function
+    animation-fill-mode
+    animation -->
+
+    <!-- div {
+        animation-name: example;
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        animation-delay: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+      The same animation effect as above can be achieved by using the shorthand animation property:
+      
+      Example
+      div {
+        animation: example 5s linear 2s infinite alternate;
+      } 
+        
+      
+      Run Animation in Reverse Direction or Alternate Cycles
+The animation-direction property specifies whether an animation should be played forwards, backwards or in alternate cycles.
+
+The animation-direction property can have the following values:
+
+normal - The animation is played as normal (forwards). This is default
+reverse - The animation is played in reverse direction (backwards)
+alternate - The animation is played forwards first, then backwards
+alternate-reverse - The animation is played backwards first, then forwards-->
+
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: bisque;
+    border: 1px solid black;
+}
+.box{
+    width: 250px;
+    height: 80px;
+    border: 2px solid black;
+    margin: 10px;
+    padding: 2px;
+    border-radius: 10px;
+    background-color: aquamarine;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    animation-name: movement;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    /* animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); */
+    z-index: 2;
+
+    animation-timing-function: linear;
+    animation-direction: alternate-reverse;
+}
+@keyframes movement{
+    from{
+        top:0;
+        left:0;
+    }
+    to{
+          top:220px;
+          left:1200px;
+          background-color: deeppink;
+    }
+      to{
+        top: 230px;
+        right: 600px;
+        background-color: chartreuse;
+    }
+} 
+    .box1{
+        width: 250px;
+    height: 80px;
+    border: 2px solid black;
+    margin: 10px;
+    padding: 2px;
+    border-radius: 10px;
+    background-color: aquamarine;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+        animation: movement 5s linear 2s infinite alternate;
+        z-index: 1;
+    }
+ /* @keyframes  movement{
+    0%{
+         top:0;
+         left:0;}
+    50%{
+        background-color: yellow; left: 600px; top: 100px;
+    }
+    100%{
+        background-color: darkorchid; left: 600px; bottom: 300px;
+    } */
+
+   @keyframes movement1{
+    from{
+        top: 0px;
+        left: 0px;
+    }
+    to{
+        top: 0px;
+        left: 1200x;
+    }
+   }
+
+</style>   
+</head>
+<body>
+    <div class="container">
+    <div class="box">A</div>
+    <div class="box1">B</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paralax website</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .wrapper{
+            height: 100vh;
+            width: 100vw;
+            perspective: 10px;
+            overflow-x: hidden;
+            overflow-y: auto;
+            position: relative;
+         
+        }
+        .container{
+            height: 100%;
+            width: 100%;
+            transform-style: preserve-3d;
+            z-index: -1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .background-1, .foreground{
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .background-1{
+            transform: translateZ(-40px) scale(5.07);
+        }
+        .foreground{
+            transform: translateZ(-20px) scale(3.07);
+        }
+        .adventure {
+            font-size: 6rem;
+            position: absolute;
+            letter-spacing:5rem;
+            font-weight:bold;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: white;
+            transform: translateX(40px) translateY(-50px);
+            text-shadow: 0px 0px 10px  black;
+            animation: adventure 5s linear infinite;
+            /* top: -15%;
+            left: -15%; */
+        }
+        /* @keyframes adventure{
+            0%{
+                left: 0;
+                top: 0;
+                transform: translateX(40px) translateY(-50px);
+            }
+            50%{
+                left: 0;
+                top: 0;
+                letter-spacing: 6rem;
+                transform: translateX(40px) translateY(-50px);
+            }
+            80%{
+                left: 0;
+                top: 0;
+                letter-spacing: 7rem;
+                transform: translateX(40px) translateY(-50px);
+            }
+            100%{
+                left: 0;
+                top: 0;
+                letter-spacing: 5rem;
+                transform: translateX(40px) translateY(-50px);
+            }
+        } */
+        .section{
+            background-color: rgb(8, 8, 8);
+        }
+        .head_desc{
+            font-size: 3rem;
+            font-weight: bold;
+            color: white;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .content{
+            padding: 1.5rem;
+        }
+        .para{
+            color: white;
+            font-size: larger;
+            text-align: left;
+        }
+        .bg1{
+            background-image: url(../sport-1.jpg);
+        }
+        .bg2{
+            background-image: url(../sport-2.jpg);
+        }
+        .bg3{
+            background-image: url(../sport-3.jpg);
+        }
+        .bg{
+            position: relative;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            height: 500px;
+        }
+        .desc{
+            position: absolute;
+            background-color: white;
+            font-weight: bold;
+            font-size: 2.5rem;
+            padding: 1rem;
+            top: 230px;
+            left: 600px ;
+            transform: translateX(60%) translateY(-50%);
+        }
+        .desc2{
+            position: absolute;
+            background-color: white;
+            font-weight: bold;
+            font-size: 2.5rem;
+            padding: 1rem;
+            top: 230px;
+            left: 500px ;
+            transform: translateX(60%) translateY(-50%);
+        }
+      
+
+    </style>
+</head>
+<body>
+      <div class="wrapper">
+        <div class="container">
+            <img src="../background-1.png" class="background-1" alt="img1">
+            <img src="../foreground.png" alt="img2" class="foreground">
+            <h1 class="adventure">ADVENTURE</h1>
+        </div>
+        <div class="section">
+              <div class="content">
+                <div class="head_desc">ADVENTURE TIME!</div>
+                <br/><br/>
+                <div class="para">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium quas maiores qui harum quidem unde, accusamus corporis optio, facere excepturi ut, exercitationem praesentium quasi minus atque asperiores! Numquam totam dignissimos voluptatibus soluta laudantium? Inventore, at. Asperiores blanditiis magni quos maxime molestiae atque accusantium consectetur animi tenetur quis hic a, nemo veniam non quam soluta nostrum, deserunt laboriosam mollitia aperiam suscipit architecto quas. Nisi ipsam vel tempora expedita! Eum, cupiditate eveniet beatae aperiam, quasi cumque eius, obcaecati ab a qui harum! Recusandae, debitis repellat. Ipsam perferendis dignissimos qui voluptas. Commodi assumenda voluptatem, vitae nesciunt quod explicabo laboriosam unde illum harum rem?</p>
+                    <br/><br/>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur temporibus ut, consequuntur quam maiores aspernatur repellendus voluptates officia quia consectetur adipisci molestias aperiam dolores qui in fugit id, natus soluta vero nam. Quo perferendis nam suscipit eius consectetur, tempore, fuga in nostrum dolorem qui quas repudiandae ex alias, necessitatibus aliquam nobis illo sint! Fugit adipisci ad ipsum maxime illo vitae hic tempora doloribus? Voluptate, illum ducimus magni numquam rerum fuga repellendus ab, consequatur laboriosam unde architecto quae possimus cumque in quidem, placeat temporibus dignissimos. Laudantium, voluptates. Inventore magni cumque, eos quasi est doloremque ad, quam architecto alias eaque assumenda! Eveniet.</p>
+                </div>
+              </div>
+              <div class="bg bg1">
+                <div class="desc">RIDING</div>
+              </div>
+              <div class="content">
+                <div class="para">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium quas maiores qui harum quidem unde, accusamus corporis optio, facere excepturi ut, exercitationem praesentium quasi minus atque asperiores! Numquam totam dignissimos voluptatibus soluta laudantium? Inventore, at. Asperiores blanditiis magni quos maxime molestiae atque accusantium consectetur animi tenetur quis hic a, nemo veniam non quam soluta nostrum, deserunt laboriosam mollitia aperiam suscipit architecto quas. Nisi ipsam vel tempora expedita! Eum, cupiditate eveniet beatae aperiam, quasi cumque eius, obcaecati ab a qui harum! Recusandae, debitis repellat. Ipsam perferendis dignissimos qui voluptas. Commodi assumenda voluptatem, vitae nesciunt quod explicabo laboriosam unde illum harum rem?</p>
+                    <br/><br/>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur temporibus ut, consequuntur quam maiores aspernatur repellendus voluptates officia quia consectetur adipisci molestias aperiam dolores qui in fugit id, natus soluta vero nam. Quo perferendis nam suscipit eius consectetur, tempore, fuga in nostrum dolorem qui quas repudiandae ex alias, necessitatibus aliquam nobis illo sint! Fugit adipisci ad ipsum maxime illo vitae hic tempora doloribus? Voluptate, illum ducimus magni numquam rerum fuga repellendus ab, consequatur laboriosam unde architecto quae possimus cumque in quidem, placeat temporibus dignissimos. Laudantium, voluptates. Inventore magni cumque, eos quasi est doloremque ad, quam architecto alias eaque assumenda! Eveniet.</p>
+                </div>
+              </div>
+              <div class="bg bg2">
+                <div class="desc2">PARA-GLIDING</div>
+              </div>
+              <div class="content">
+                <div class="para">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium quas maiores qui harum quidem unde, accusamus corporis optio, facere excepturi ut, exercitationem praesentium quasi minus atque asperiores! Numquam totam dignissimos voluptatibus soluta laudantium? Inventore, at. Asperiores blanditiis magni quos maxime molestiae atque accusantium consectetur animi tenetur quis hic a, nemo veniam non quam soluta nostrum, deserunt laboriosam mollitia aperiam suscipit architecto quas. Nisi ipsam vel tempora expedita! Eum, cupiditate eveniet beatae aperiam, quasi cumque eius, obcaecati ab a qui harum! Recusandae, debitis repellat. Ipsam perferendis dignissimos qui voluptas. Commodi assumenda voluptatem, vitae nesciunt quod explicabo laboriosam unde illum harum rem?</p>
+                    <br/><br/>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur temporibus ut, consequuntur quam maiores aspernatur repellendus voluptates officia quia consectetur adipisci molestias aperiam dolores qui in fugit id, natus soluta vero nam. Quo perferendis nam suscipit eius consectetur, tempore, fuga in nostrum dolorem qui quas repudiandae ex alias, necessitatibus aliquam nobis illo sint! Fugit adipisci ad ipsum maxime illo vitae hic tempora doloribus? Voluptate, illum ducimus magni numquam rerum fuga repellendus ab, consequatur laboriosam unde architecto quae possimus cumque in quidem, placeat temporibus dignissimos. Laudantium, voluptates. Inventore magni cumque, eos quasi est doloremque ad, quam architecto alias eaque assumenda! Eveniet.</p>
+                </div>
+              </div>
+              <div class="bg bg3">
+                <div class="desc">SURFING</div>
+              </div>
+              <div class="content">
+                <div class="para">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium quas maiores qui harum quidem unde, accusamus corporis optio, facere excepturi ut, exercitationem praesentium quasi minus atque asperiores! Numquam totam dignissimos voluptatibus soluta laudantium? Inventore, at. Asperiores blanditiis magni quos maxime molestiae atque accusantium consectetur animi tenetur quis hic a, nemo veniam non quam soluta nostrum, deserunt laboriosam mollitia aperiam suscipit architecto quas. Nisi ipsam vel tempora expedita! Eum, cupiditate eveniet beatae aperiam, quasi cumque eius, obcaecati ab a qui harum! Recusandae, debitis repellat. Ipsam perferendis dignissimos qui voluptas. Commodi assumenda voluptatem, vitae nesciunt quod explicabo laboriosam unde illum harum rem?</p>
+                    <br/><br/>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur temporibus ut, consequuntur quam maiores aspernatur repellendus voluptates officia quia consectetur adipisci molestias aperiam dolores qui in fugit id, natus soluta vero nam. Quo perferendis nam suscipit eius consectetur, tempore, fuga in nostrum dolorem qui quas repudiandae ex alias, necessitatibus aliquam nobis illo sint! Fugit adipisci ad ipsum maxime illo vitae hic tempora doloribus? Voluptate, illum ducimus magni numquam rerum fuga repellendus ab, consequatur laboriosam unde architecto quae possimus cumque in quidem, placeat temporibus dignissimos. Laudantium, voluptates. Inventore magni cumque, eos quasi est doloremque ad, quam architecto alias eaque assumenda! Eveniet.</p>
+                </div>
+              </div>
+            </div>
+            </div>
+            </div>
+</body>
+</html>

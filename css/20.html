@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+        .wrapper{
+            height: 100vh;
+            width: 100vw;
+        }
+        .container{
+            max-width: 70vw;
+            margin: 0 auto;
+            height: 100%;
+            padding: 2rem;
+        }
+        .card {
+            height: 300px;
+            width: 300px;
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.2s linear 0s;
+        }
+        .card:hover{
+            transform: scale(1.01);
+            box-shadow: 1px 1px 15px rgb(24, 23, 23);
+       
+        }
+        .card img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            position: absolute;
+            z-index: -1;
+            transition: all 0.2s linear 0s;
+            filter: grayscale(100%);
+        }
+        .card:hover img{
+            transform: scale(1.05);
+            filter: grayscale(0%);
+        }
+        .card span{
+            position: absolute;
+            z-index: 1;
+            top: 270px;
+            padding: 0.2rem;
+            /* background-color: white; */
+            transform: translateX(20px);
+            font-size: medium;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: bold;
+            opacity: 0.5;
+            transition: all 0.2s linear 0s;
+        }
+        .card:hover span{
+            opacity: 1;
+            transform: translateX(50%) translateY(0%);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="card">         
+            <img src="../sport-2.jpg" alt="image1">
+            <span  id="img_num">Image1</span>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

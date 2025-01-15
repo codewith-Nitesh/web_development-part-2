@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient</title>
+    
+    <style>
+        *{
+            --dark-red:red;
+        }
+
+:root{
+        --bg-color:green;
+    }
+        .box{
+            height: 200px;
+            width: 300px;
+            border: 1px solid black;
+            background-image: linear-gradient(red,blue);
+            background-image: linear-gradient(to right, red, yellow, green );
+            background-image: linear-gradient(to top right, white,gray,black);
+            background-image: linear-gradient(7deg, white,gray,black 70%);
+            background-image: repeating-linear-gradient(7deg, white,gray,black 70%)
+            /* background-image: linear-gradient(to bottom, rgba(255,0,255,0)); */
+        }
+        .box2{
+            margin-top: 3rem;
+            height: 200px;
+            width: 300px;
+            background-image: radial-gradient(circle,white,gray,black,orange,red,pink,yellow,blue);
+            border: 1px solid black;
+            background-image: radial-gradient(yellow 10%,orange 10%, red 40%,pink 50%);
+        }
+        .box3{
+            margin-top: 3rem;
+            height: 200px;
+            width: 300px;
+            width: max(60%,400px);
+            /* calc or calculation function */
+            width: calc(50%-10%);
+            background-color: var(--bg-color);
+            background-color: var(--dark-red);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+    <div class="box2">
+     
+    </div>
+    <div class="box3">
+
+    </div>
+</body>
+</html>
