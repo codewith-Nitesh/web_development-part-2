@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            position: relative;
+        }
+        .desc,.det{
+            position: absolute;
+            opacity: 0;
+        }
+        [type="radio"]:checked
+        [type="raadio"]:not(:checked){
+            /* position: absolute; */
+            visibility: hidden;
+        }
+        #description:checked~.desc{
+            opacity: 1;
+        }
+        #details:checked~.det{
+            opacity: 1;
+        }
+        .det{
+            display: flex;
+            gap: 30px;
+        }
+        input+label{
+            opacity: 0.2;
+            transition: all 0.5s ease;
+        }
+
+        input+label:hover{
+            opacity: 0.8;
+        }
+        /* input+label:checked{
+            opacity: 1;
+        } */
+
+    </style>
+</head>
+<body>
+     <input type="radio" title="radio" name="selected"  checked id="description">
+     <label for="description">Description</label>
+     <input type="radio" title="radio" name="selected" id="details">
+     <label for="details">Details</label>
+    <p class="desc">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe qui ipsa in recusandae impedit. Sapiente quae magnam nihil! Cupiditate, fuga.
+    </p>
+    <p class="det">
+        <span>80cm</span>
+        <span>65cm</span>
+        <span>90cm</span>
+        <span>17.6cm</span>
+    </p>
+</body>
+</html>

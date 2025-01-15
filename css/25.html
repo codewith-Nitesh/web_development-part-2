@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .background_color{
+            width: 100vw;
+            height: 100vh;
+            
+        }
+        .back_color{
+            height: 100%;
+            width: 100%;
+            position: relative;
+            opacity: 0;
+            z-index: -1;
+        }
+        .red_color{
+            background-color: red;
+            position: absolute;
+            
+        }.aqua_color{
+            background-color: aqua;
+            position: absolute;
+           
+        }
+
+        [type="radio"]:checked,
+        [type="radio"]:not(:checked){
+          position: absolute;  
+          z-index: 1;
+        }
+        .for-course1:checked~.back_color.red_color{
+           opacity: 1;
+           position: absolute;
+        }
+        .for-course2:checked~.back_color.aqua_color{
+           opacity: 1;
+           position: absolute;
+        }
+      
+
+         
+    </style>
+</head>
+<body>
+    <h3>Background color</h3>
+    <div class="background_color">
+        <div class="back_color red_color"></div>
+        <div class="back_color aqua_color"></div>
+
+    <input type="radio" name="course" checked title="radio" class="radio">
+    <label for="course1"></label>
+    <br/>
+    <input type="radio" name="course" title="radio"  class="radio">
+    <label for="course2"></label>
+    </div>
+</body>
+</html>

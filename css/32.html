@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+            @import url("https://fonts.googleleapis.com/css2?family=poppins:wght@300;400;500;600&display=swap");
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'poppins', sans-serif;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+        }
+        .wrapper{
+            height:100%;
+            width: 100%;
+            background: #ff6760;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .box{
+            max-width: 400px;
+            width: 100%;
+           
+        }
+        .box .search_box{
+            position: relative;
+            height: 50px;
+            max-width: 380px;
+            margin: auto;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+            border-radius: 25px;
+            transition: all 0.3s ease;
+
+        }
+        .search_box input{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            border-radius: 25px;
+            background: #fff;
+            outline: none;
+            border: none;
+        }
+        .input_text{
+            padding-left: 20px;
+            font-size: 18px;
+        }
+        .search_box .icon{
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 50px;
+            height: 100%;
+            text-align: center;
+            line-height: 50px;
+            background: #ff6760;
+            border-radius: 0 25px 25px 0;
+            outline: none;
+            border: none;
+            color:#fff ;
+            font-size: 20px;
+
+        }
+        #check:checked~.search_box{
+            max-width: 50px;
+        }
+        #check{
+            display: none;
+        }
+        #check:checked~.search_box .icon{
+            transition: all 0.1s ease;
+            background:#fff ;
+            color: #ff6760;
+            border-radius:100px;
+            width: 55px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+          <div class="box">
+            <input type="checkbox" id="check">
+            <div class="search_box">
+                <input type="text" title="text" placeholder="Type here..." class="input_text">
+                <label for="check" class="icon">
+                    <i class="fas fa-search"></i>
+                </label>
+            </div>
+          </div>
+    </div>
+</body>
+</html>

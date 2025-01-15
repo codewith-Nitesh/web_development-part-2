@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body{
+        overflow-x: hidden;
+    }
+        .wrapper{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #button{
+            border: 1px solid black;
+            background-color: yellow;
+            padding: 1.5rem 2rem;
+            font-weight: bold;
+            width: 150px;
+            box-shadow: 3px 3px 5px 2px black;
+            position: relative;
+            z-index: 1;
+            transform: scale(1.02);
+            transition: all 0.2s linear 0s;
+            opacity: 0.9;
+            border-radius: 10px;
+        }
+        #button:hover{
+            cursor: pointer;
+            font-weight: bold;
+            opacity: 1;
+            border: 2px solid black;
+            box-shadow: 2px 2px 2px 1px black;
+            transform: translateY(-0.5rem);
+            transform: scale(1);
+        }
+        #button::before{
+            margin: 0.2rem;
+            border-radius: 10px;
+            content: "";
+            position: absolute;
+            z-index: -1;
+            background-color: gray;
+            top: 50px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            transform: scaleX(1);
+            transform-origin: left;
+            transition: all 0.2s linear 0s;
+        }
+        #button:hover::before{
+            transform: scaleX(0);
+            border-radius: 10px;
+        }
+        span{
+            opacity: 0.5;
+            transition: all 0.2s linear 0s;
+        }
+        #button:hover span{
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <a href="https://www.facebook.com" target="_blank" rel="noopener">
+            <button type="button" id="button">
+                <span>Hire me</span>
+            </button>
+        </a>
+    </div> 
+</body>
+</html>

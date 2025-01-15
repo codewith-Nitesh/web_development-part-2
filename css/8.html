@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        :root{
+            --primary-color:red;
+            --custom-width:330px;
+        }
+        .container{
+            height: 100vh;
+            width: 100vw;
+            background-color: bisque;
+        }
+        .box{
+            height: 100px;
+            width: 250px;
+            background-color: aqua;
+            border: 2px solid black;
+            margin: 3rem;
+            padding: 2px;
+            color: black;
+            box-sizing: border-box;
+        }
+        #box1{
+            box-shadow: 5px 5px 5px 5px var(--primary-color);
+        }
+        #box2{
+            box-shadow: inset 5px 5px 5px 5px gold;
+        }
+        #box3{
+            box-shadow: 5px -5px 5px 3px rgb(60, 165, 0);
+        }
+        #box4{
+            box-shadow: 3px 3px red, -1em 0 .4em olive; ;
+        }
+        .div1{
+            text-shadow: 3px 3px 3px red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">A</div>
+        <div class="box" id="box2">B</div>
+        <div class="box" id="box3">C</div>
+        <div class="box" id="box4">D</div>
+        <div class="div1">
+            <h1>Hello G</h1>
+        </div>
+    </div>
+
+</body>
+</html>

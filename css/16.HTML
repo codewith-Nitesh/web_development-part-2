@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+        }
+        .container{
+            height: 100%;
+            width: 100%;
+            padding: 2rem;
+            /* row-gap: ;
+            column-gap: ; */
+            display: grid;
+            gap: 1rem;
+            background-color: rgb(37, 36, 33);
+            border: 2px solid black;
+            justify-items: center;
+            align-items: center;
+            place-items: stretch;
+            grid-template-columns: repeat(1,1fr) 400px repeat(1,1fr);
+            grid-template-rows: repeat(4,1fr);
+        }
+        .box{
+            background-color: rgb(228, 224, 13);
+            border: 2px solid black;
+            /* height: 100px;
+            width: 100px; */
+            /* align-self: start;
+            align-self: center;
+            justify-self: center; */
+            /* place-self: center center ; */
+        }
+        .A{
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+        .B{
+            
+            grid-row-start: 2;
+            grid-row-end: 4;
+        }
+        .C{
+            grid-column-start: 2;
+            grid-column-end: 4;
+
+        }
+        /* .D{
+            width: 250px;
+        } */
+        .F{
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+         
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box A">A</div>
+        <div class="box B">B</div>
+        <div class="box C">C</div>
+        <div class="box D">D</div>
+        <div class="box E">E</div>
+        <div class="box F">F</div>
+    </div>
+</body>
+</html>

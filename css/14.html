@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+        }
+        .container{
+            width: 100%;
+            height: 100%;
+            background-color: rgb(201, 113, 25);
+            display: grid;
+            padding: 4rem;
+            gap: 2rem;
+            grid-template-rows: repeat(6,1fr);
+            grid-template-columns: repeat(1,1fr);
+         
+        }
+        .box{
+            background-color: rgb(46, 49, 48);
+            border: 3px solid white;
+            display: flex;
+            align-items:center ;
+            justify-content: center;
+            font-weight: bold;
+            /* height: 200px; */
+            color: white;
+            font-weight: bold;
+        }
+        
+        @media (min-width:750px){
+            .container{
+            grid-template-rows: repeat(4,1fr);
+            grid-template-columns: repeat(3,1fr);
+           }
+        .header{
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+        .footer{
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+        .sidebar{
+            grid-row-start:2 ;
+            grid-row-end:4 ;
+        }
+        .maincontent{
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }     
+    }  
+        
+    </style>
+</head>
+<body>
+       <div class="container">
+        <div class="box header">Header</div>
+        <div class="box sidebar">Side Bar</div>
+        <div class="box">C</div>
+        <div class="box">D</div>
+        <div class="box maincontent">E</div>
+        <div class="box footer">F</div>
+       </div>
+</body>
+</html>

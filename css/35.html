@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+              @import url("https://fonts.googleleapis.com/css2?family=poppins:wght@300;400;500;600&display=swap");
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'poppins', sans-serif;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f2f2f2;
+        }
+        nav{
+            width: 600px;
+            height: 60px;
+            position: relative;
+            border-radius: 5px;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 5px 5px rgba(0,0,0,0.25);
+
+        }
+        nav label{
+            width: 100%;
+            height: 100%;
+            line-height: 60px;
+            font-weight: bold;
+            font-size: 18px;
+            border-radius: 5px;
+            margin: 0 5px;
+            text-align: center;
+            position: relative;
+            color: #8e44ad;
+            z-index: 1;
+            cursor: pointer;
+        }
+        nav label:hover{
+            background: rgba(142,68,173,0.3);
+        }
+        nav label i{
+            margin-right: 4px;
+        }
+        .slider{
+            position: absolute;
+            height: 100%;
+            width: 20%;
+            top: 0;
+            left: 0;
+            background: #8e44ad;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        #home:checked~nav .slider{
+            left: 0%;
+        }
+        #blog:checked~nav .slider{
+            left: 20%;
+        }
+        #code:checked~nav .slider{
+            left: 40%;
+        }
+        #envelope:checked~nav .slider{
+            left: 60%;
+        }
+        #user:checked~nav .slider{
+            left: 80%;
+        }
+        .container [type="radio"]{
+            display: none;
+        }
+        #home:checked~nav label.home,
+        #blog:checked~nav label.blog,
+        #code:checked~nav label.code,
+        #envelope:checked~nav label.envelope,
+        #user:checked~nav label.user{
+            transition: all 0.5s ease;
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="radio" title="radio" id="home" checked name="slider">
+        <input type="radio" title="radio" id="blog" name="slider">
+        <input type="radio" title="radio" id="code" name="slider">
+        <input type="radio" title="radio" id="envelope" name="slider">
+        <input type="radio" title="radio" id="user" name="slider">
+        <nav>
+            <div class="slider"></div>
+            <label for="home" class="home"><i class="fas fa-home"></i>Home</label>
+            <label for="blog" class="blog"><i class="fas fa-blog"></i>Blog</label>
+            <label for="code" class="code"><i class="fas fa-code"></i>Code</label>
+            <label for="envelope" class="envelope"><i class="fas fa-envelope"></i>Help</label>
+            <label for="user" class="user"><i class="fas fa-user"></i>About</label>
+        </nav>
+    </div>
+</body>
+</html>
